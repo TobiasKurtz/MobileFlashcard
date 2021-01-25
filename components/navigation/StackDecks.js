@@ -1,9 +1,7 @@
 import React from "react";
 import {
   createStackNavigator,
-  TransitionPresets,
-  TransitionSpecs,
-  CardStyleInterpolators,
+  TransitionPresets,  
 } from "@react-navigation/stack";
 import List from "../List";
 import Deck from "../Deck";

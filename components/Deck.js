@@ -49,16 +49,16 @@ function Deck(props) {
       </View>
       <View style={styles.btnGroup}>
         <TouchableOpacity
-          style={styles.button}
+          style={[styles.button, { backgroundColor: "blue" }]}
           onPress={() => {
             props.navigation.navigate("AddCard", { DeckId: deck.title });
           }}
         >
-          <Text style={[styles.text, { color: "black" }]}>Add Card</Text>
+          <Text style={[styles.text, { color: "white" }]}>Add Card</Text>
         </TouchableOpacity>
         {deck.questions.length !== 0 && (
           <TouchableOpacity
-            style={[styles.button, { backgroundColor: "#AA36F4" }]}
+            style={[styles.button, { backgroundColor: "#9acd32" }]}
             disabled={deck.questions.length === 0}
             onPress={() => {
               props.navigation.navigate("Quiz", {
@@ -78,7 +78,7 @@ function Deck(props) {
           <Text
             style={[
               styles.text,
-              { color: "#FF1744", fontSize: 17, marginTop: 10 },
+              { color: "#800000", fontSize: 23, marginTop: 20 },
             ]}
           >
             Delete Deck {deck.title}
@@ -92,9 +92,8 @@ function Deck(props) {
 }
 
 const styles = StyleSheet.create({
-  text: {
-    marginLeft: 10,
-    fontSize: 24,
+  text: {    
+    fontSize: 35,
     textAlign: "center",
   },
   container: {
@@ -106,9 +105,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 10,
     margin: 15,
-    borderColor: "#AA36F4",
+    borderColor: "blue",
     borderWidth: 2,
-    borderRadius: 20,
+    borderRadius: 5,
   },
   btnGroup: {
     margin: 15,

@@ -64,10 +64,10 @@ function mapDispatchToProps(dispatch) {
 export default connect(mapStateToProps, mapDispatchToProps)(List);
 
 const styles = StyleSheet.create({
-  text: {
-    marginLeft: 10,
-    fontSize: 24,
+  text: {    
+    fontSize: 50,
     textAlign: "center",
+    color:"#5f9ea0",
   },
   container: {
     flex: 1,
@@ -77,16 +77,15 @@ const styles = StyleSheet.create({
     padding: 10,
     minHeight: 100,
     borderWidth: 1,
-    borderColor: "#AA36F4",
+    borderColor: "blue",
     margin: 9,
     marginBottom: 13,
-    backgroundColor: "white",
-    borderRadius: 15,
-    padding: 10,
-    elevation: 10,
+    backgroundColor: "#dcdcdc",
+    borderRadius: 5,
+    padding: 15,
+    elevation: 5,
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.5,
+    shadowOffset: { width: 0, height: 3 },    
     shadowRadius: 5,
   },
 });

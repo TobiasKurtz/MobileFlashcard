@@ -46,7 +46,7 @@ class AddDeck extends Component {
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={styles.container}>
             <Text style={styles.text}>
-              What is the title of your new Deck ?
+              Insert title of your new Deck ?
             </Text>
             <TextInput
               placeholder={

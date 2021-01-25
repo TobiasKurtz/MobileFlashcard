@@ -4,26 +4,37 @@ const FLASHCARDS_STORAGE_KEY = "flashcards_data";
 
 function initialData() {
   return {
-    React: {
-      title: "React",
+    Germany: {
+      title: "Germany",
       questions: [
         {
-          question: "What is React?",
-          answer: "A library for managing user interfaces",
+          question: "What is the capital city of Germany?",
+          answer: "Germany",
         },
         {
-          question: "Where do you make Ajax requests in React?",
-          answer: "The componentDidMount lifecycle event",
+          question: "What is the Population of Germany?",
+          answer: "83 million people.",
+        },
+        {
+          question: "How many Bundesländer are in Germany?",
+          answer: "16",
         },
       ],
     },
-    JavaScript: {
-      title: "JavaScript",
+    Math: {
+      title: "Math",
       questions: [
         {
-          question: "What is a closure?",
-          answer:
-            "The combination of a function and the lexical environment within which that function was declared.",
+          question: "What is the first prime number?",
+          answer: "2",
+        },
+        {
+          question: "What is 0 to the power of 0?",
+          answer: "1",
+        },
+        {
+          question: "What is: -(7-2+(2*3+4)/(-5))?",
+          answer: "-3",
         },
       ],
     },
@@ -31,12 +42,11 @@ function initialData() {
 }
 
 export async function getDecks() {
-  try {
-    //to reset data incomment the next line
-     const clear = await AsyncStorage.clear();
+  try {    
+    const clear = await AsyncStorage.clear();
     const results = await AsyncStorage.getItem(FLASHCARDS_STORAGE_KEY);
     if (results) {
-      console.log('ABCDEFG')
+      console.log('What is here')
       const data = JSON.parse(results);
       return data;
     } else {

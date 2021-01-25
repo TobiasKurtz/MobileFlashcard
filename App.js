@@ -35,7 +35,7 @@ function App() {
             },
           })}
           tabBarOptions={{
-            activeTintColor: "#AA36F4",
+            activeTintColor: "#add8e6",
             inactiveTintColor: "gray",
             tabBarVisible: false,
           }}
@@ -43,12 +43,12 @@ function App() {
           <Tab.Screen
             name="StackDecksComponent"
             component={StackDecksComponent}
-            options={{ title: "Decks List" }}
+            options={{ title: "Decks" }}
           />
           <Tab.Screen
             name="StackNewDeckComponent"
             component={StackNewDeckComponent}
-            options={{ title: "Add Deck" }}
+            options={{ title: "New Deck" }}
           />
         </Tab.Navigator>
       </NavigationContainer>

@@ -17,13 +17,13 @@ function Quiz(props) {
   const endQuiz = currentCard < deck.questions.length ? false : true;
 
   return (
-    <View style={[styles.container, { backgroundColor: "#F5F5DC" }]}>
+    <View style={[styles.container, { backgroundColor: "#32cd32" }]}>
       <View>
         <Text style={[styles.text]}>Quiz on {deck.title}</Text>
         {endQuiz ? (
           <Text style={[styles.text, { color: "#AA36F4" }]}>{"Result"}</Text>
         ) : (
-          <Text style={[styles.text, { color: "#AA36F4" }]}>
+          <Text style={[styles.text, { color: "blue" }]}>
             question {currentCard + 1 + " "}of{" " + deck.questions.length}
           </Text>
         )}
@@ -155,25 +155,16 @@ const styles = StyleSheet.create({
   correctIncorectBtns: {
     flexDirection: "row",
   },
-  text: {
-    marginLeft: 10,
-    fontSize: 24,
+  text: {    
+    fontSize: 30,
     textAlign: "center",
   },
   container: {
     flex: 1,
     alignItems: "stretch",
-    borderWidth: 1,
-    borderColor: "#AA36F4",
-    margin: 9,
-    marginBottom: 13,
+    borderWidth: 1,        
     backgroundColor: "white",
-    borderRadius: 15,
-    elevation: 10,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.5,
-    shadowRadius: 5,
+    elevation: 10, 
   },
   card: {
     padding: 10,
@@ -185,19 +176,15 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 15,
     padding: 10,
-    elevation: 10,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.5,
-    shadowRadius: 5,
+    elevation: 10,    
   },
   button: {
-    borderColor: "#AA36F4",
-    borderRadius: 20,
-    height: 40,
-    width: "80%",
+    borderColor: "blue",
+    borderRadius: 100,
+    height: "55%",
+    width: "40%",
     alignSelf: "center",
-    backgroundColor: "#AA36F4",
+    backgroundColor: "blue",
     borderWidth: 1,
     flexDirection: "row",
     alignItems: "center",
